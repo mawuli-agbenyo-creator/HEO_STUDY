@@ -12,6 +12,8 @@ body{
     align-items: center;
     justify-content: center;
     background: #40f485;
+    /* background-image: url("/assets/img/HEO_TRANS3.png"); */
+   
 }
 .container{
     position: relative;
