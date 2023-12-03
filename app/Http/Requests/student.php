@@ -22,27 +22,24 @@ class student extends FormRequest
     public function rules(): array
     {
         return [
-            'full_name' => 'required|string',
+            'full_name' => 'required|string|max:255',
             'date_of_birth' => 'required|date',
-            'email' => 'required|email',
+            'email' => 'required|email|max:255',
             'mobile_number' => 'required|numeric',
             'gender' => 'required|in:Male,Female',
-            'zip' => 'required|string',
-            'level' => 'required|numeric',
-            'university' => 'required|string',
-            'course' => 'required|string',
-            'address_type' => 'required|string',
-            'nationality' => 'required|string',
-            'state' => 'required|string',
-            'district' => 'required|string',
+            'zip' => 'required|string|max:255',
+            'level' => 'required|in:100,200,300,400',
+            'university' => 'required|string|max:255',
+            'course' => 'required|string|max:255',
+            'address_type' => 'required|string|max:255',
+            'nationality' => 'required|string|max:255',
+            'state' => 'required|string|max:255',
+            'district' => 'required|string|max:255',
             'block_number' => 'required|numeric',
-            'ward_number' => 'required|numeric',
-            'father_name' => 'required|string',
-            'mother_name' => 'required|string',
-            'grandfather_name' => 'required|string',
-            'spouse_name' => 'nullable|string',
-            'father_in_law_name' => 'nullable|string',
-            'mother_in_law_name' => 'nullable|string',
+            'Passport' => 'required|file', // Add appropriate validation rules for file uploads
+            'guardian_name' => 'required|string|max:255',
+            'guardian_phone_number' => 'required|string|max:255',
+            'emergency' => 'required|string|max:255',
         ];
     }
 }

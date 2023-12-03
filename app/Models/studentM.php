@@ -24,13 +24,11 @@ class studentM extends Model
         'state',
         'district',
         'block_number',
-        'ward_number',
-        'father_name',
-        'mother_name',
-        'grandfather_name',
-        'spouse_name',
-        'father_in_law_name',
-        'mother_in_law_name',
+        'Passport',
+        'guardian_name',
+        'guardian_phone_number',
+        'emergency',
+       
     ];
 
 

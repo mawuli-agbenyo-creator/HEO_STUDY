@@ -20,10 +20,11 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create']);
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
+Route::get('/logout',[AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 
-Route::get('/dashboard', [starter::class, 'index'])->name('dashboard_president');
-Route::get('/user/{id}', [starter::class, 'show'])->name('user.show');
+Route::get('/dashboard', [starter::class, 'index'])->name('dashboard_president')->middleware(['auth']);
+Route::get('/user/{id}', [starter::class, 'show'])->name('user.show')->middleware(['auth']);
 
 
 Route::get('/', function () {
@@ -38,6 +39,6 @@ Route::prefix('student')->group(function () {
     });
 });
 
-Route::get('/reg', [starter::class, 'std_reg']);
+Route::get('/student/registration', [starter::class, 'std_reg'])->name('std_reg');
 Route::post('/reg/submit', [starter::class, 'std_reg_store'])->name('reg_submit');
 Route::get('/reg/successful', [starter::class, 'successfull'])->name('reg_successfull');

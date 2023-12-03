@@ -19,7 +19,7 @@
     <div class="container">
         <header>Registration Student</header>
 
-        <form action="{{route('reg_submit')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('reg_submit')}}" method="POST">
             @csrf
             <div class="form first">
                 <div class="details personal">
@@ -205,8 +205,8 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Guardian Name</label>
-                            <input type="text" name="guardian_name" placeholder="Enter father name" required>
-                            @error('guardian_name')
+                            <input type="text" name="father_name" placeholder="Enter father name" required>
+                            @error('father_name')
                             <p>{{$message}}</p>
                             @enderror
                         </div>
@@ -214,7 +214,7 @@
                         <div class="input-field">
                             <label>Guardian phone number</label>
                             <input type="text" name="guardian_phone_number" placeholder="Guardian phone number" required>
-                            @error('guardian_phone_number')
+                            @error('mother_name')
                             <p>{{$message}}</p>
                             @enderror
                         </div>

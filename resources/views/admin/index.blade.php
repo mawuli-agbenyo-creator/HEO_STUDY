@@ -1,7 +1,7 @@
  <x-header />
  <x-desktop-sidebar />
  <x-mobile-sidebar />
- <x-nav />
+ <x-nav :user="$user" />
  <x-github />
  <x-card :student="$student" />
  <x-modal_for_table />
