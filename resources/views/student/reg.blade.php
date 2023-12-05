@@ -111,10 +111,21 @@
                             <label>Select Carrer</label>
                             <select required name="course">
                                 <option disabled selected>Select course</option>
-                                <option value="course">course</option>
-                                <option value="course">course</option>
-                                <option value="course">course</option>
-                                <option value="course">course</option>
+                                <option value="frontend">Frontend Web Development</option>
+                                <option value="backend">Backend Web Development</option>
+                                <option value="cybersecurity">Cybersecurity</option>
+                                <option value="ai">AI (Artificial Intelligence)</option>
+                                <option value="dataAnalytics">Data Analytics</option>
+                                <option value="dataScience">Data Science</option>
+                                <option value="devops">DevOps</option>
+                                <option value="cloudComputing">Cloud Computing</option>
+                                <option value="dataVisualization">Data Visualization</option>
+                                <option value="gameDevelopment">Game Development</option>
+                                <option value="machineLearning">Machine Learning</option>
+                                <option value="mobileDevelopment">Mobile Development</option>
+                                <option value="uxUiDesign">UX/UI Design</option>
+                                <option value="graphicDesign">Graphic Design</option>
+                                <option value="animation">Animation</option>
                             </select>
                             @error('course')
                             <p>{{$message}}</p>
