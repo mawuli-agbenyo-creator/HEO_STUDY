@@ -33,8 +33,7 @@ jobs:
         DB_DATABASE: ${{ secrets.DB_DATABASE }}
         DB_HOST: ${{ secrets.DB_HOST }}
       run: vendor/bin/phpunit
-    - name: Migrate DB
-      run: php artisan migrate
+
     - name: Execute tests again after migration
     
       run: vendor/bin/phpunit
