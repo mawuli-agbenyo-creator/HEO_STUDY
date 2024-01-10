@@ -42,3 +42,16 @@ Route::prefix('student')->group(function () {
 Route::get('/student/registration', [starter::class, 'std_reg'])->name('std_reg');
 Route::post('/reg/submit', [starter::class, 'std_reg_store'])->name('reg_submit');
 Route::get('/reg/successful', [starter::class, 'successfull'])->name('reg_successfull');
+
+
+
+
+Route::get('/home', [starter::class, 'home'])->name('home');
+Route::get('/admission', [starter::class, 'admission'])->name('admission');
+Route::get('/about', [starter::class, 'about'])->name('about');
+Route::get('/career', [starter::class, 'career'])->name('career');
+Route::get('/contact', [starter::class, 'contact'])->name('contact');
+
+
+
+

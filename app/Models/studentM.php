@@ -9,28 +9,27 @@ class studentM extends Model
 {
     use HasFactory;
     protected $table = 'students';
+
+
     protected $fillable = [
         'full_name',
-        'date_of_birth',
         'email',
-        'mobile_number',
-        'gender',
-        'zip',
-        'level',
-        'university',
-        'course',
-        'address_type',
         'nationality',
-        'state',
-        'district',
-        'block_number',
-        'Passport',
-        'guardian_name',
-        'guardian_phone_number',
-        'emergency',
-       
+        'date_of_birth',
+        'gender',
+        'marital_status',
+        'address',
+        'mother_name',
+        'parent_guardian_phone',
+        'parent_guardian_address',
+        'education_level',
+        'course_of_study',
+        'university',
+        'completion_status',
+        'job_title',
+        'industry',
+        'business_nature',
+        'career_path',
+        'statement',
     ];
-
-
-    // protected $guard = [];
 }

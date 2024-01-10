@@ -1,84 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Project Name</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HEO</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    
+	<!-- boxicons link--->
+	<link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
+    <!-- remix icons link--->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    
 
-        section {
-            max-width: 800px;
-            margin: 2em auto;
-            padding: 2em;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 0.8em 2em;
-            text-decoration: none;
-            color: #fff;
-            background-color: #007BFF;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <!-- google fonts link--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!-- or -->
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
 
-    {{-- <header>
-        <h1>Your Project Name</h1>
-        <p>Welcome to our platform!</p>
-    </header> --}}
+	<header>
+		<a href="{{asset('img/HEO TRANS9.png')}}" class="logo">HEO </a>
 
-    <section>
-        <h2>Get Started</h2>
-        <p>Welcome to our platform! Start your journey with us and explore a world of opportunities.</p>
-        <p>Whether you are a student looking to register or an admin managing the system, we have you covered.</p>
-        <a href="{{ route('std_reg') }}" class="cta-button">Sign Up Now</a>
-    </section>
+		<ul class="navmenu">
+			<li><a href="/">Welcome</a></li>
+			<li><a href="{{route('home')}}">Home</a></li>
+			<li><a href="{{route('admission')}}">Admission</a></li>
+			<li><a href="{{route('about')}}">About</a></li>
+            <li><a href="{{route('career')}}">Career</a></li>
+			<li><a href="{{route('contact')}}">Contact</a></li>
+		</ul>
+
+		<div class="nav-right">
+			<a href="/Admission.html" class="nav-btn">Join us</a>
+			<div class="bx bx-menu" id="menu-icon"></div>
+		</div>
+	</header>
+
+	<section class="hero">
+		<div class="hero-text">
+			<span>Heo</span>
+			<h5>WELCOME</h5>
+			<h1>Help Elevate Each Other</h1>
+			<p>Empowering Youth, Transforming and Building a Brighter Future, One Byte at a Time.</p>
+			<div class="hero-btn">
+				<a href="{{route('home')}}">Go To Home<i class="ri-arrow-right-line"></i></a>
+				<a href="{{route('admission')}}" class="btn2">Register Now<i class="ri-play-fill"></i></a>
+			</div>
+		</div>
+
+		<div class="hero-img">
+			<img src="{{asset('img/next5trans.png')}}">
+		</div>
+	</section>
+
+	<div class="images-box">
+		<div class="box">
+			<div class="box-img">
+				<img src="{{asset('img/career5.jpeg')}}">
+			</div>
+
+			<div class="box-text">
+				<h5>Explore careers</h5>
+				<a href="{{route('career')}}">
+					
+					<i class="ri-star-fill"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box-img">
+				<img src="{{asset('img/career3.jpeg')}}">
+			</div>
+
+			<div class="box-text">
+				<h5>Administration</h5>
+				<a href="{{route('admission')}}">
+					
+					<i class="ri-star-fill"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="box-img">
+				<img src="{{asset('img/career4.jpeg')}}">
+			</div>
+
+			<div class="box-text">
+				<h5>Explore</h5>
+				<a href="{{route('about')}}">
+					
+					<i class="ri-star-fill"></i>
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="social-icons">
+		<a href="#"><i class='bx bxl-html5'></i></a>
+		<a href="#"><i class='bx bxl-css3'></i></a>
+        <a href="#"><i class='bx bxl-javascript'></i></a>
+        <a href="#"><i class='bx bxl-java' ></i></a>
+        <a href="#"><i class='bx bxl-react' ></i></a>
+        <a href="#"><i class='bx bxl-nodejs' ></i></a>
+        <a href="#"><i class='bx bxl-python' ></i></a>
+		<a href="#"><i class='bx bxl-tailwind-css' ></i></a>
+	</div>
+
+    <div class="scroll-btn">
+		<a href="#">
+			<i class="ri-arrow-down-double-line"></i>
+			Scroll Down
+		</a>
+	</div>
+
+    
+    
     
 
-    <footer>
-        &copy; 2023 HEO. All rights reserved.
-    </footer>
+
+
+
+    
+        
+   
+    
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+	
+
+	<script src="https://unpkg.com/scrollreveal"></script>
+
+	<!-- custom js file--->
+	<script src="{{asset('js/main.js')}}"></script>
+      
 
 </body>
+
+  
 </html>

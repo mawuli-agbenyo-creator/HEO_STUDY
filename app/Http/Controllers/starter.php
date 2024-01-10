@@ -32,44 +32,18 @@ class starter extends Controller
   }
 
 
-  public function std_reg_store(Request $request)
+  public function std_reg_store(student $request)
   {
-    // Validate the request
-    $validator = Validator::make($request->all(), [
-      'full_name' => 'required|string',
-      'date_of_birth' => 'required|date',
-      'email' => 'required|email',
-      'mobile_number' => 'required|string',
-      'gender' => 'required|string',
-      'zip' => 'required|string',
-      'level' => 'required|integer',
-      'university' => 'required|string',
-      'course' => 'required|string',
-      'address_type' => 'required|string',
-      'nationality' => 'required|string',
-      'state' => 'required|string',
-      'district' => 'required|string',
-      'block_number' => 'required|integer',
-      'Passport' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust the allowed file types and size as needed
-      'guardian_name' => 'required|string',
-      'guardian_phone_number' => 'required|string',
-      'emergency' => 'required|string',
-    ]);
-
-    // Check if the validation fails
-    if ($validator->fails()) {
-      return response()->json(['message' => 'Validation failed', 'errors' => $validator->errors()], 422);
-        // The '422' status code indicates unprocessable entity
-  }
+   
 
   $data = $request->all();
 
-    // Handle file upload
-    if ($request->hasFile('Passport')) {
-      $path = $request->file('Passport')->store('passport_photos');
-      // Update the data array with the file path
-      $data['passport'] = $path;
-    }
+    // // Handle file upload
+    // if ($request->hasFile('Passport')) {
+    //   $path = $request->file('Passport')->store('passport_photos');
+    //   // Update the data array with the file path
+    //   $data['passport'] = $path;
+    // }
 
     
 
@@ -111,5 +85,31 @@ class starter extends Controller
 
   public function Dashboard()
   {
+  }
+
+
+  public function home() 
+  {
+    return view('home');
+  }
+
+  public function admission()
+  {
+    return view('admission');
+  }
+
+  public function about()
+  {
+    return view('about');
+  }
+
+  public function career()
+  {
+    return view('career');
+  }
+
+  public function contact()
+  {
+    
   }
 }
