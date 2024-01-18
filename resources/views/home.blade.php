@@ -42,8 +42,8 @@
           <h4>Let</h4>
           <h1>HELP ELEVATE EACH OTHER</h1>
           <p>Empowering Youth, Transforming and Building a Brighter Future,  <br>  One Byte at a Time.</p>
-          <a href="index.html">GO BACK</a>
-          <a href="/Admission.html" class="ctaa"><i class="ri-play-fill"></i>Register</a>
+          <a href="/">GO BACK</a>
+          <a href="{{route('admission')}}" class="ctaa"><i class="ri-play-fill"></i>Register</a>
         </div>
       
         <div class="hero-img">
@@ -96,7 +96,7 @@
                   <h5> Uplifting <span>&  Collaborative </span></h5>
                   <p><strong>HEO (Help Elevate Each Other) is a non-profit organization dedicated to empowering young people, particularly those from underprivileged backgrounds, 
                     through education and skill development in the field of technology and computer science.<br>  We believe that access to quality technological literacy and computer science education is crucial for promoting national development, creating jobs, and addressing the challenges of unemployment and poverty. Our goal is to provide a supportive and inclusive learning environment where young people can acquire the skills and knowledge they need to build successful careers in the tech industry and contribute positively to the nation.</strong> </p>
-                  <a href="/career.html" class="btn">learn more</a>
+                  <a href="{{route('contact')}}" class="btn">learn more</a>
         </div>
         </section>
       
@@ -115,7 +115,7 @@
                  Prepare youth for careers in the tech industry.
                  Create a more inclusive and diverse tech workforce.
                 Help youth from all backgrounds reach their full potential</p>  
-            <a href="/Admission.html">Join now</a>
+            <a href="{{route('admission')}}">Join now</a>
           </div>
           <div class="visual">
             <img src="img/house1.jpg" alt="" />
@@ -133,7 +133,7 @@
                  Create a world where all youth have the opportunity to learn and grow, regardless of their
                 background or circumstances.
                 </p>  
-            <a href="/Admission.html">Join now</a>
+            <a href="{{route('admission')}}">Join now</a>
           </div>
           <div class="visual">
             <img src="img/house1.jpg" alt="" />
@@ -452,23 +452,23 @@
         <div class="col-xs-6 col-md-3">
           <h6>Categories</h6>
           <ul class="footer-links">
-            <li><a href="/career.html">Programs</a></li>
-            <li><a href="/about.html">Community</a></li>
+            <li><a href="{{route('career')}}">Programs</a></li>
+            <li><a href="{{route('about')}}">Community</a></li>
             <li><a href="#">Support HEO</a></li>
             <li><a href="#">FAQs</a></li>
             <li><a href="#">Blog & Resources</a></li>
-            <li><a href="/Admission.html">Application Process</a></li>
+            <li><a href="{{route('admission')}}">Application Process</a></li>
           </ul>
         </div>
   
         <div class="col-xs-6 col-md-3">
           <h6>Quick Links</h6>
           <ul class="footer-links">
-            <li><a href="/index.html">Welcome</a></li>
-            <li><a href="/about.html">About Us</a></li>
-            <li><a href="/Admission.html">Administration</a></li>
+            <li><a href="/">Welcome</a></li>
+            <li><a href="{{route('about')}}">About Us</a></li>
+            <li><a href="{{route('admission')}}">Administration</a></li>
             <li><a href="/career.html">Careers</a></li>
-            <li><a href="/contact.html">Contact us</a></li>
+            <li><a href="{{route('contact')}}">Contact us</a></li>
           </ul>
         </div>
       </div>

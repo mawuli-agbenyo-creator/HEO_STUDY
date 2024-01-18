@@ -312,7 +312,7 @@
             <i class='bx bx-cast'></i>
             <h3>AI Cell</h3>
             <p>Become the architect of intelligent machines! Delve into Python, TensorFlow, machine learning, and deep learning to unlock the power of artificial intelligence.</p>
-            <a href="/career.html" class="btn">Learn More</a>
+            <a href="{{route('career')}}" class="btn">Learn More</a>
         </div>
 
 
@@ -375,6 +375,11 @@
             
             <input type="email" name="email" id="email" placeholder="Your email address" required>
             @error('email')
+                <p>{{$message}}</p>
+            @enderror
+
+            <input type="phone_number" name="phone_number" id="phone_number" placeholder="Your phone number" required>
+            @error('phone_number')
                 <p>{{$message}}</p>
             @enderror
             
