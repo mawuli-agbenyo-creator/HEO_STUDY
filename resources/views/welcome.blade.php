@@ -35,13 +35,14 @@
 			<li><a href="/">Welcome</a></li>
 			<li><a href="{{route('home')}}">Home</a></li>
 			<li><a href="{{route('admission')}}">Admission</a></li>
+			<li><a href="{{route('std_reg')}}">Register</a></li> 
 			<li><a href="{{route('about')}}">About</a></li>
-            <li><a href="{{route('career')}}">Career</a></li>
+      <li><a href="{{route('career')}}">Career</a></li>
 			<li><a href="{{route('contact')}}">Contact</a></li>
 		</ul>
 
 		<div class="nav-right">
-			<a href="/Admission.html" class="nav-btn">Join us</a>
+			<a href="{{route('std_reg')}}" class="nav-btn">Join us</a>
 			<div class="bx bx-menu" id="menu-icon"></div>
 		</div>
 	</header>
@@ -54,7 +55,7 @@
 			<p>Empowering Youth, Transforming and Building a Brighter Future, One Byte at a Time.</p>
 			<div class="hero-btn">
 				<a href="{{route('home')}}">Go To Home<i class="ri-arrow-right-line"></i></a>
-				<a href="{{route('admission')}}" class="btn2">Register Now<i class="ri-play-fill"></i></a>
+				<a href="{{route('std_reg')}}" class="btn2">Register Now<i class="ri-play-fill"></i></a>
 			</div>
 		</div>
 

@@ -21,20 +21,27 @@
 
 
 
-    <header>
-        <a href="#" class="logo">HEO</a>
-      
-        <ul class="navlist">
+<header>
+    <nav>
+        <div class="logo" style="display: flex;align-items: center;">
+         <img src="{{asset('img/HEO TRANS9.png')}}" height="1000px"width= "1050px">
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
             <li><a href="/">Welcome</a></li>
-			<li><a href="{{route('home')}}">Home</a></li>
-			<li><a href="{{route('admission')}}">Admission</a></li>
-			<li><a href="{{route('about')}}">About</a></li>
+            <li><a href="{{route('home')}}">Home</a></li>
             <li><a href="{{route('career')}}">Career</a></li>
-			<li><a href="{{route('contact')}}">Contact</a></li>
+            <li><a href="{{route('about')}}">About</a></li>
+            <li><a href="{{route('admission')}}">Admission</a></li>
+            <li><a href="{{route('std_reg')}}">Register</a></li> 
+            <li><button class="login-button" href="{{route('std_reg')}}">Join Us</button></li>
         </ul>
-      
-        <div class="bx bx-menu" id="menu-icon"></div>
-      </header>
+    </nav>
+</header>
       
       <section class="hero">
         <div class="hero-text">
@@ -46,9 +53,9 @@
           <a href="{{route('admission')}}" class="ctaa"><i class="ri-play-fill"></i>Register</a>
         </div>
       
-        <div class="hero-img">
+       <!-- <div class="hero-img">
           <img src="img/Admisiontrans.png">
-        </div>
+        </div> -->
       </section>
       
       
