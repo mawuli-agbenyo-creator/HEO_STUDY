@@ -29,7 +29,8 @@
             <li><a href="{{route('about')}}">About</a></li>
             <li><a href="{{route('contact')}}">Contact</a></li>
             <li><a href="{{route('admission')}}">Admission</a></li>
-            <li><button class="login-button" href="{{route('admission')}}">Join Us</button></li>
+            <li><a href="{{route('std_reg')}}">Register</a></li> 
+            <li><button class="login-button" href="{{route('register')}}">Join Us</button></li>
         </ul>
     </nav>
 </header>

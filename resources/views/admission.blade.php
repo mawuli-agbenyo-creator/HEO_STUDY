@@ -35,9 +35,9 @@
             <li><a href="{{route('home')}}">Home</a></li>
             <li><a href="{{route('career')}}">Career</a></li>
             <li><a href="{{route('about')}}">About</a></li>
-            {{-- <li><a href="{{route('career')}}">Career</a></li> --}}
             <li><a href="{{route('admission')}}">Admission</a></li>
-            <li><button class="login-button" href="#">Join Us</button></li>
+            <li><a href="{{route('std_reg')}}">Register</a></li> 
+            <li><button class="login-button" href="{{route('std_reg')}}">Join Us</button></li>
         </ul>
     </nav>
 </header>
@@ -261,7 +261,7 @@
             <i class='bx bxl-angular'></i>
             <h3>Web Development Cell</h3>
             <p>Build stunning websites and captivating web applications! Master HTML, CSS, JavaScript, and popular frameworks like React and Angular.</p>
-            <a href="{{route('contact')}}" class="btn">Learn More</a>
+            <a href="{{route('contact')}}" class="btn">Register</a>
         </div>
 
         <div class="row">
@@ -270,7 +270,7 @@
             <i class='bx bxl-c-plus-plus'></i>
             <h3>Cybersecurity Cell</h3>
             <p> Become a digital guardian and protect the online world! Master ethical hacking, network security, penetration testing, and incident response to thwart cyber threats.</p>
-            <a href="{{route('career')}}" class="btn">Learn More</a>
+            <a href="{{route('std_reg')}}" class="btn">Register</a>
         </div>
 
         <div class="row">
@@ -278,7 +278,7 @@
             <i class='bx bxl-postgresql'></i>
             <h3>Data Science and Analytics Cell</h3>
             <p>Uncover hidden insights and turn data into gold! Learn Python, R, SQL, and statistical analysis to transform raw data into actionable insights for businesses and organizations.</p>
-            <a href="{{route('career')}}" class="btn">Learn More</a>
+            <a href="{{route('std_reg')}}" class="btn">Register</a>
         </div>
 
         <div class="row">
@@ -287,7 +287,7 @@
             <i class='bx bxl-c-plus-plus'></i>
             <h3>Software Development Cell</h3>
             <p>Build the backbone of the digital world! Master popular programming languages like Python, Java, and C++, software development methodologies, and cloud computing to create web applications, mobile apps, and more.</p>
-            <a href="{{route('career')}}" class="btn">Learn More</a>
+            <a href="{{route('std_reg')}}" class="btn">Register</a>
         </div>
 
         <div class="row">
@@ -296,7 +296,7 @@
             <h3>Game Development Cell</h3>
             <p>Craft immersive worlds and become a gaming master! Learn Unity, Unreal Engine, C++, and game design principles to build the next blockbuster title.
             </p>
-            <a href="{{route('career')}}" class="btn">Learn More</a>
+            <a href="{{route('std_reg')}}" class="btn">Register</a>
         </div>
 
         <div class="row">
@@ -304,7 +304,7 @@
             <i class='bx bx-cast'></i>
             <h3>Cloud Computing Cell</h3>
             <p>Build agile and scalable solutions in the cloud! Master cloud platforms like AWS, Azure, and GCP, cloud infrastructure design, and DevOps principles to empower businesses with cutting-edge cloud solutions.</p>
-            <a href="{{route('career')}}" class="btn">Learn More</a>
+            <a href="{{route('std_reg')}}" class="btn">Register</a>
         </div>
 
         <div class="row">
@@ -312,7 +312,7 @@
             <i class='bx bx-cast'></i>
             <h3>AI Cell</h3>
             <p>Become the architect of intelligent machines! Delve into Python, TensorFlow, machine learning, and deep learning to unlock the power of artificial intelligence.</p>
-            <a href="{{route('career')}}" class="btn">Learn More</a>
+            <a href="{{route('std_reg')}}" class="btn">Register</a>
         </div>
 
 
@@ -321,7 +321,7 @@
             <i class='bx bxl-figma'></i>
             <h3>UX/UI Design Cell</h3>
             <p>Craft seamless user experiences and bridge the gap between humans and technology! Master user experience (UX) principles, user interface (UI) design tools like Figma and Sketch, and interaction design to create intuitive and beautiful interfaces.</p>
-            <a href="{{route('career')}}" class="btn">Learn More</a>
+            <a href="{{route('std_reg')}}" class="btn">Register</a>
         </div>
 
         <div class="row">
@@ -329,7 +329,7 @@
             <i class='bx bx-cast'></i>
             <h3>Graphic Design Cell</h3>
             <p>Unleash your inner artist and make the digital world beautiful! Master Adobe Creative Suite, typography, branding, and user interface design to create stunning visuals.</p>
-            <a href="{{route('career')}}" class="btn">Learn More</a>
+            <a href="{{route('std_reg')}}" class="btn">Register</a>
         </div>
 
     </div>
@@ -340,203 +340,82 @@
 
   
 
-
-
-
-
-
-  <div class="register-box">
-    <!-- multistep form -->
-    <form id="msform" action="{{route('reg_submit')}}" enctype="multipart/form-data" method="POST" class="form">
-      @csrf
-        <!-- progressbar -->
-        <ul id="progressbar">
-          {{-- <li class="active">Account Setup</li> --}}
-          <li class="active">Personal Details</li>
-          <li>Course Registration</li>
-          
-        </ul>
-        <!-- fieldsets -->
-        {{-- <fieldset>
-          <h2 class="fs-title">Create your account</h2>
-          <h3 class="fs-subtitle">Please fill below</h3>
-          <input type="text" name="email" placeholder="Email" />
-          <input type="password" name="pass" placeholder="Password" />
-          <input type="password" name="cpass" placeholder="Confirm Password" />
-          <input type="button" name="next" class="next action-button" value="Next" />
-        </fieldset> --}}
-        <fieldset>
-            <h2 class="fs-title">Personal Details</h2>
-            <h3 class="fs-subtitle">Please provide valid information</h3>
-            <input type="text" name="full_name" id="full_name" placeholder="Name" required />
-            @error('full_name')
-                <p>{{$message}}</p>
-            @enderror
-            
-            <input type="email" name="email" id="email" placeholder="Your email address" required>
-            @error('email')
-                <p>{{$message}}</p>
-            @enderror
-
-            <input type="phone_number" name="phone_number" id="phone_number" placeholder="Your phone number" required>
-            @error('phone_number')
-                <p>{{$message}}</p>
-            @enderror
-            
-            <input type="text" name="nationality" id="nationality" placeholder="Nationality" />
-            @error('nationality')
-                <p>{{$message}}</p>
-            @enderror
-            
-            <input type="date" name="date_of_birth" id="dob" required placeholder="Date" />
-            @error('date_of_birth')
-                <p>{{$message}}</p>
-            @enderror
-            
-            <select name="gender" id="gender" required>
-                <option value="" disabled selected>Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            @error('gender')
-                <p>{{$message}}</p>
-            @enderror
-            
-            <select name="marital_status" id="maritalStatus" required>
-                <option value="" disabled selected>Select Marital Status</option>
-                <option value="single">Single</option>
-                <option value="married">Married</option>
-                <option value="divorced">Divorced</option>
-                <option value="widowed">Widowed</option>
-            </select>
-            @error('marital_status')
-                <p>{{$message}}</p>
-            @enderror
-            
-            <textarea name="address" id="residentialAddress" rows="4" placeholder="Your residential address" required></textarea>
-            @error('address')
-                <p>{{$message}}</p>
-            @enderror
-            
-            <input type="text" name="mother_name" id="motherName" placeholder="Mother's full name" required>
-            @error('mother_name')
-                <p>{{$message}}</p>
-            @enderror
-            
-            <input type="tel" name="parent_guardian_phone" id="parentGuardianPhone" placeholder="Parent/Guardian phone number" required>
-            @error('parent_guardian_phone')
-                <p>{{$message}}</p>
-            @enderror
-            
-            <textarea name="parent_guardian_address" id="parentGuardianAddress" rows="4" placeholder="Parent/Guardian address" required></textarea>
-            @error('parent_guardian_address')
-                <p>{{$message}}</p>
-            @enderror
-            
-
-
-
-            <input type="button" class="next action-button" value="Next" />
-        </fieldset>
-        <fieldset>
-            <h2 class="fs-title"> Course Registration</h2>
-<h3 class="fs-subtitle">Please provide valid information</h3>
-<input type="text" id="educationLevel" name="education_level" placeholder="Your current/highest level of education" required>
-@error('education_level')
-    <p>{{$message}}</p>
-@enderror
-
-<input type="text" id="courseOfStudy" name="course_of_study" placeholder="Your course of study">
-@error('course_of_study')
-    <p>{{$message}}</p>
-@enderror
-
-<input type="text" id="university" name="university" placeholder="Your university/institution">
-@error('university')
-    <p>{{$message}}</p>
-@enderror
-
-<select id="completionStatus" name="completion_status" required>
-    <option value="" disabled selected>completion Status</option>
-    <option value="completed">completed</option>
-    <option value="ongoing">Ongoing</option>
-</select>
-@error('completion_status')
-    <p>{{$message}}</p>
-@enderror
-
-<input type="text" id="jobTitle" name="jobTitle" placeholder="Your current job title">
-@error('jobTitle')
-    <p>{{$message}}</p>
-@enderror
-
-<input type="text" id="industry" name="industry" placeholder="Your industry">
-@error('industry')
-    <p>{{$message}}</p>
-@enderror
-
-<input type="text" id="businessNature" name="business_nature" placeholder="Nature of your business">
-@error('business_nature')
-    <p>{{$message}}</p>
-@enderror
-
-<div class="section">
-    <h2>Desired Career Path</h2>
-    <div class="field">
-        <label for="careerPath"></label>
-        <select id="careerPath" name="career_path" required>
-            <option value="">Select One</option>
-            <option value="fullStackWebDevelopment">Full Stack Web Development</option>
-                        <option value="frontEndWebDevelopment">Front-End Web Development</option>
-                        <option value="backEndWebDevelopment">Back-End Web Development</option>
-                        <option value="cybersecurity">Cybersecurity</option>
-                        <option value="artificialIntelligence">Artificial Intelligence (AI)</option>
-                        <option value="dataAnalytics">Data Analytics</option>
-                        <option value="dataScience">Data Science</option>
-                        <option value="devOps">DevOps</option>
-                        <option value="cloudComputing">Cloud Computing</option>
-                        <option value="dataVisualization">Data Visualization</option>
-                        <option value="gameDevelopment">Game Development</option>
-                        <option value="machineLearning">Machine Learning</option>
-                        <option value="mobileDevelopment">Mobile Development</option>
-                        <option value="uxUiDesign">UX/UI Design</option>
-                        <option value="graphicDesign">Graphic Design</option>
-                        <option value="animation">Animation</option>
-            <!-- Add other options as needed -->
-        </select>
-        @error('career_path')
-            <p>{{$message}}</p>
-        @enderror
-    </div>
-
-    <textarea id="statement" name="statement" rows="8" placeholder="Write your statement here..." required></textarea>
-    @error('statement')
-        <p>{{$message}}</p>
-    @enderror
-</div>
-
-<div class="section">
-    <h2>Instructions for the Statement of Interest</h2>
-    <p>Please write your statement in English language.</p>
-    <p>Use paragraphs to organize your response.</p>
-    <p>Avoid using bullet points or numbering.</p>
-    <p>Aim for a clear and concise writing style.</p>
-    <p>Highlight key achievements, experiences, and motivations related to technology and HEO, specifically your chosen career path.</p>
-    <p>Proofread your statement carefully before submitting it.</p>
-</div>
-
-<div class="section">
-    <h2>Additional Requirements</h2>
-    <p>You may be required to submit additional documents, such as transcripts or letters of recommendation, upon request.</p>
-    <p>All applications will be reviewed by the HEO Admissions Team.</p>
-    <p>Shortlisted candidates may be invited to an interview.</p>
-</div>
-
-<input type="submit" class="next action-button" value="Submit" />
-
-        </fieldset>
-      </form>
+ <!--- Site footer -->
+ <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">Heostudy.com <i>HEO </i> Empowering Youth, Transforming and Building a Brighter Future, One Byte at a Time.</p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="{{route('career')}}">Programs</a></li>
+            <li><a href="{{route('about')}}">Community</a></li>
+            <li><a href="#">Support HEO</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Blog & Resources</a></li>
+            <li><a href="{{route('admission')}}">Application Process</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="/">Welcome</a></li>
+            <li><a href="{{route('about')}}">About Us</a></li>
+            <li><a href="{{route('admission')}}">Administration</a></li>
+            <li><a href="/career.html">Careers</a></li>
+            <li><a href="{{route('contact')}}">Contact us</a></li>
+          </ul>
+        </div>
       </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+  
+          <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by <a href="heostudy.com">HEO</a>.
+          </p>
+        </div>
+  
+  
+  
+  
+      <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul role="list" class="card__social flex-group">
+            <li>
+              <a href="https://x.com/heostudy_com?s=21">
+                <i class="fa-brands fa-twitter "></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-linkedin "></i>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/heostudy_com">
+                <i class="fa-brands fa-instagram "></i>
+            </li>
+            <li>
+             <a href="https://youtube.com/@HEOSTUDY?si=W49duEP8SaHMM0ve">
+              <i class="fa-brands fa-youtube "></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- partial -->
+  
+
+
+
+
+ 
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   

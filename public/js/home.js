@@ -1,21 +1,19 @@
-
 const cardControllers = document.querySelectorAll("[data-card-controller]");
 
-cardControllers.forEach(controller => {
-  controller.addEventListener("click", (e) => {
-    const card = e.currentTarget.parentElement.parentElement;
-    const isVisible = card.dataset.visible;
+cardControllers.forEach((controller) => {
+    controller.addEventListener("click", (e) => {
+        const card = e.currentTarget.parentElement.parentElement;
+        const isVisible = card.dataset.visible;
 
-    if (isVisible === "false") {
-      card.setAttribute("data-visible", true);
-    } else {
-      card.setAttribute("data-visible", false);
-    }
-  })
-})
+        if (isVisible === "false") {
+            card.setAttribute("data-visible", true);
+        } else {
+            card.setAttribute("data-visible", false);
+        }
+    });
+});
 
-
-let menu = document.querySelector('#menu-icon');
+/*let menu = document.querySelector('#menu-icon');
 let navlist = document.querySelector('.navlist');
 
 menu.onclick = () => {
@@ -33,5 +31,19 @@ const sr = ScrollReveal ({
 sr.reveal('.hero-text',{delay:200, origin:'top'});
 sr.reveal('.hero-img',{delay:450, origin:'top'});
 sr.reveal('.icons',{delay:500, origin:'left'});
-sr.reveal('.scroll-down',{delay:500, origin:'right'});
+sr.reveal('.scroll-down',{delay:500, origin:'right'}); */
 
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburger.addEventListener("click", () => {
+    //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach((link) => {
+        link.classList.toggle("fade");
+    });
+
+    //Hamburger Animation
+    hamburger.classList.toggle("toggle");
+});

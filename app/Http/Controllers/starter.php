@@ -28,7 +28,8 @@ class starter extends Controller
 
   public function std_reg()
   {
-    return view('student.reg');
+    
+    return view('register');
   }
 
 
