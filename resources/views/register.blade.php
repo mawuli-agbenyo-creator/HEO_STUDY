@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>HEO Administration</title>
+  <title>HEO Register</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css'><link rel="stylesheet" href="{{asset('css/admission.css')}}">
   <link rel="preconnect" href="https://fonts.gstatic.com" >
 
@@ -16,10 +16,8 @@
         <!-- or -->
         <link rel="stylesheet"
         href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-     
-   
-
 </head>
+
 <header>
     <nav>
         <div class="logo" style="display: flex;align-items: center;">
@@ -42,7 +40,9 @@
         </ul>
     </nav>
 </header>
+
 <body>
+
 <div class="register-box">
     <!-- multistep form -->
     <form id="msform" action="{{route('reg_submit')}}" enctype="multipart/form-data" method="POST" class="form">
