@@ -45,7 +45,7 @@ Route::get('/reg/successful', [starter::class, 'successfull'])->name('reg_succes
 
 
 
-
+//routes
 Route::get('/home', [starter::class, 'home'])->name('home');
 Route::get('/admission', [starter::class, 'admission'])->name('admission');
 Route::get('/about', [starter::class, 'about'])->name('about');
