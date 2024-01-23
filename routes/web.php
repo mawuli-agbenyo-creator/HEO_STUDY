@@ -31,6 +31,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//new
+
 
 Route::prefix('student')->group(function () {
     Route::get('/reg', function () {
