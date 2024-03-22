@@ -19,11 +19,11 @@ return new class extends Migration
             $table->string('nationality')->nullable();
             $table->date('date_of_birth');
             $table->string('gender');
-            $table->string('marital_status');
+            $table->string('marital_status')->nullable();
             $table->text('address');
-            $table->string('mother_name');
-            $table->string('parent_guardian_phone');
-            $table->text('parent_guardian_address');
+            $table->string('mother_name')->nullable();
+            $table->string('parent_guardian_phone')->nullable();
+            $table->text('parent_guardian_address')->nullable();
             $table->string('education_level');
             $table->string('course_of_study')->nullable();
             $table->string('university')->nullable();
@@ -31,8 +31,8 @@ return new class extends Migration
             $table->string('job_title')->nullable();
             $table->string('industry')->nullable();
             $table->string('business_nature')->nullable();
-            $table->string('career_path');
-            $table->longText('statement');
+            $table->string('career_path')->nullable();
+            $table->longText('statement')->nullable();
             $table->timestamps();
         });
     }

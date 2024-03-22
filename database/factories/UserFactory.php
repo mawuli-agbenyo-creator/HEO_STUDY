@@ -22,10 +22,10 @@ class UserFactory extends Factory
     {
         $roles = ['organizer', 'education_coordinator', 'mentor_coordinator', 'finance_officer', 'disciplinary_officer', 'pr_officer', 'president'];
         return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
+            'name' => 'illona addae',
+            'email' => 'illona.addae@heostudy.com',
             'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
+            'password' => static::$password ??= Hash::make('illona.addae@heostudy'),
             'remember_token' => Str::random(10),
             'role' => $this->faker->randomElement($roles),
             

@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="style.css">
-     
+
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="{{asset('data/css/std_reg.css')}}">
+    <link rel="stylesheet" href="{{ asset('data/css/std_reg.css') }}">
 
-   <title>Responsive Regisration Form </title>
+    <title>Responsive Regisration Form </title>
 </head>
+
 <body>
     <div class="container">
         <header>Registration Student</header>
 
-        <form action="{{route('reg_submit')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('reg_submit') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form first">
                 <div class="details personal">
@@ -30,7 +32,7 @@
                             <label>Full Name</label>
                             <input type="text" name="full_name" placeholder="Enter your name" required>
                             @error('full_name')
-                                <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -38,7 +40,7 @@
                             <label>Date of Birth</label>
                             <input type="date" name="date_of_birth" placeholder="Enter birth date" required>
                             @error('date_of_birth')
-                                <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -46,7 +48,7 @@
                             <label>Email</label>
                             <input type="text" name="email" placeholder="Enter your email" required>
                             @error('email')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -54,7 +56,7 @@
                             <label>Mobile Number</label>
                             <input type="number" name="mobile_number" placeholder="Enter mobile number" required>
                             @error('mobile_number')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -63,11 +65,11 @@
                             <select required name="gender">
                                 <option disabled selected>Select gender</option>
                                 <option value="Male">Male</option>
-                                <option  value="Female">Female</option>
-                                
+                                <option value="Female">Female</option>
+
                             </select>
                             @error('gender')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -75,7 +77,7 @@
                             <label>zip</label>
                             <input type="text" name="zip" placeholder="Enter your zip code" required>
                             @error('zip')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
@@ -87,7 +89,7 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Select Level</label>
-                            <select required name="level"> 
+                            <select required name="level">
                                 <option disabled selected>Select Level</option>
                                 <option value="100">100</option>
                                 <option value="200">200</option>
@@ -95,7 +97,7 @@
                                 <option value="400">400</option>
                             </select>
                             @error('level')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -103,7 +105,7 @@
                             <label>University</label>
                             <input type="text" name="university" placeholder="Enter University" required>
                             @error('university')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -128,11 +130,11 @@
                                 <option value="animation">Animation</option>
                             </select>
                             @error('course')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
-                         {{-- <div class="input-field">
+                        {{-- <div class="input-field">
                             <label>Issued State</label>
                             <input type="text" placeholder="Enter issued state" required>
                         </div>
@@ -146,13 +148,13 @@
                             <label>Expiry Date</label>
                             <input type="date" placeholder="Enter expiry date" required>
                         </div> --}}
-                    </div> 
+                    </div>
 
                     <button class="nextBtn">
                         <span class="btnText">Next</span>
                         <i class="uil uil-navigator"></i>
                     </button>
-                </div> 
+                </div>
             </div>
 
             <div class="form second">
@@ -163,8 +165,8 @@
                         <div class="input-field">
                             <label>Address Type</label>
                             <input type="text" name="address_type" placeholder="Permanent or Temporary" required>
-                            @error('address_type')
-                            <p>{{$message}}</p>
+                            @error('address')
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -172,7 +174,7 @@
                             <label>Nationality</label>
                             <input type="text" name="nationality" placeholder="Enter nationality" required>
                             @error('nationality')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -180,7 +182,7 @@
                             <label>State</label>
                             <input type="text" name="state" placeholder="Enter your state" required>
                             @error('state')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -188,7 +190,7 @@
                             <label>District</label>
                             <input type="text" name="district" placeholder="Enter your district" required>
                             @error('district')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -196,7 +198,7 @@
                             <label>Block Number</label>
                             <input type="number" name="block_number" placeholder="Enter block number" required>
                             @error('block_number')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -204,7 +206,7 @@
                             <label>Passport Picture</label>
                             <input type="file" name="Passport" placeholder="Passport Picture" required>
                             @error('Passport')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
@@ -218,15 +220,16 @@
                             <label>Guardian Name</label>
                             <input type="text" name="guardian_name" placeholder="Enter father name" required>
                             @error('guardian_name')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
                         <div class="input-field">
                             <label>Guardian phone number</label>
-                            <input type="text" name="guardian_phone_number" placeholder="Guardian phone number" required>
+                            <input type="text" name="guardian_phone_number" placeholder="Guardian phone number"
+                                required>
                             @error('guardian_phone_number')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
 
@@ -258,7 +261,7 @@
                             <label>Emergency phone Number</label>
                             <input type="text" name="emergency" placeholder="Emergency phone Number" required>
                             @error('emergency')
-                            <p>{{$message}}</p>
+                                <p>{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
@@ -268,17 +271,18 @@
                             <i class="uil uil-navigator"></i>
                             <span class="btnText">Back</span>
                         </div>
-                        
+
                         <button class="sumbit">
                             <span class="btnText">Submit</span>
                             <i class="uil uil-navigator"></i>
                         </button>
                     </div>
-                </div> 
+                </div>
             </div>
         </form>
     </div>
 
-    <script src="{{asset('data/js/std_reg.js')}}"></script>
+    <script src="{{ asset('data/js/std_reg.js') }}"></script>
 </body>
+
 </html>

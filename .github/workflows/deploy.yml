@@ -1,0 +1,30 @@
+name: Deploy to production
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute SSH commands
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_LOCATION }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          debug: true
+          use_insecure_cipher: true
+          script: |
+            cd domains/heostudy.com
+            git checkout master
+            php artisan down
+            git pull origin master
+            composer2 update --no-dev --no-interaction
+            composer2 install --no-dev --no-interaction
+            php artisan view:cache
+            php artisan up
+
